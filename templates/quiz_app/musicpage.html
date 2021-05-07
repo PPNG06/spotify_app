@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{%extends "quiz_app/basic.html"%}
+{%block body_block%}
+
+    <div class="container-lg">
+
+
+    <br>
+    <br>
+    <br>
+
+    {%if seed_artist and seed_track%}
+    <h1 class="text-white">Okay, so according to your previous choices</h1><h1 class="text-white">we recommend you the following song:</h1><br><h4 class="text-white">(The seed artist being {{seed_artist}} and the seed track being {{seed_track}}),</h4><br>
+
+    {%elif seed_artist%}
+    <h1 class="text-white">Okay, so according to your previous choices</h1><h1 class="text-white"> we recommend you the following song:</h1><br><h4 class="text-white">(The seed artist being {{seed_artist}}),</h4><br>
+
+    {%elif seed_track%}
+    <h1 class="text-white">Okay, so according to your previous choices</h1><h1 class="text-white"> we recommend you the following song:</h1><br><h4 class="text-white">(The seed track being {{seed_track}}),</h4><br>
+
+    {%endif%}
+    <p class="form-text text-white">(This is a random choice from a database, which means you will may other recommendations with the same choices)</p>
+    <br>
+    <br>
+    <br>
+    {%if music%}
+    <div class="container">
+    <table class="text-white table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Recommended tracks:</th>
+          <th scope="col">Artists</th>
+          <th scope="col">Links</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for m in music%}
+        <tr>
+          <td>{{m.title}}</td>
+          <td>{{m.artist}}</td>
+          <td class = "text-white"><a href="{{m.link}}">Spotify Link</a></td>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+    </div>
+    {%endif%}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{%endblock%}

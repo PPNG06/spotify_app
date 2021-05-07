@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'quiz_app/quiz_app.css'%}">
+  <body>
+
+
+      {% block body_block%}
+      <!-- ANYTHING OUTSIDE OF THIS WILL BE INHERITED IF EXTENDED-->
+      <div class="">
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h1 class="display-3 text-white">Welcome to the Music recommender!</h1>
+        <br>
+        <br>
+        <h4 class="display5 text-white"> So, you are looking for your new favorite music?</h4>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="{% url 'quiz_app:quiz_mainpage' %}"><button class = "btn btn-success btn-lg"type="button" name="button">Get me one!</button></a>
+
+      </div>
+      {% endblock %}
+
+  </body>
+</html>

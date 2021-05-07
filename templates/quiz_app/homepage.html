@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+{%extends "quiz_app/basic.html"%}
+{%block body_block%}
+<div class="container text-center">
+    <br>
+    <br>
+    <br>
+
+    <h4 class='text-white display-4'>Okay, please enter your name and the type of music you are looking for!</h4>
+
+    <br>
+    <br>
+
+    <div class="text-white ">
+    <form method="post">
+
+      <div class="form-group">
+        <label for="id_name">Name*:</label>
+        <input type="text" class="form-control" name="name" id="id_name" value="">
+      </div>
+
+      <br>
+      <br>
+
+      <div class="form-group">
+        <label for="id_style1">Style one*:</label> <select class="form-control" name="style1" required id="id_style1">
+          <option value="-" selected>-</option>
+
+          <option value="acoustic">Acoustic</option>
+
+          <option value="afrobeat">Afrobeat</option>
+
+          <option value="ambient">Ambient</option>
+
+          <option value="anime">Anime</option>
+
+          <option value="blues">Blues</option>
+
+          <option value="chill">Chill</option>
+
+          <option value="classical">Classical</option>
+
+          <option value="club">Club</option>
+
+          <option value="country">Country</option>
+
+          <option value="dance">Dance</option>
+
+          <option value="disco">Disco</option>
+
+          <option value="disney">Disney</option>
+
+          <option value="dubstep">Dubstep</option>
+
+          <option value="edm">Edm</option>
+
+          <option value="electro">Electro</option>
+
+          <option value="electronic">Electronic</option>
+
+          <option value="emo">Emo</option>
+
+          <option value="french">French</option>
+
+          <option value="funk">Funk</option>
+
+          <option value="groove">Groove</option>
+
+          <option value="guitar">Guitar</option>
+
+          <option value="happy">Happy</option>
+
+          <option value="hard-rock">Hard-rock</option>
+
+          <option value="hardcore">Hardcore</option>
+
+          <option value="heavy-metal">Heavy-metal</option>
+
+          <option value="hip-hop">Hip-hop</option>
+
+          <option value="holidays">Holidays</option>
+
+          <option value="house">House</option>
+
+          <option value="j-pop">J-pop</option>
+
+          <option value="jazz">Jazz</option>
+
+          <option value="k-pop">K-pop</option>
+
+          <option value="kids">Kids</option>
+
+          <option value="latin">Latin</option>
+
+          <option value="latino">Latino</option>
+
+          <option value="metal">Metal</option>
+
+          <option value="movies">Movies</option>
+
+          <option value="new-release">New-release</option>
+
+          <option value="opera">Opera</option>
+
+          <option value="party">Party</option>
+
+          <option value="piano">Piano</option>
+
+          <option value="pop">Pop</option>
+
+          <option value="rainy-day">Rainy-day</option>
+
+          <option value="reggaeton">Reggaeton</option>
+
+          <option value="road-trip">Road-trip</option>
+
+          <option value="rock">Rock</option>
+
+          <option value="rock-n-roll">Rock-n-roll</option>
+
+          <option value="romance">Romance</option>
+
+          <option value="sad">Sad</option>
+
+          <option value="salsa">Salsa</option>
+
+          <option value="samba">Samba</option>
+
+          <option value="sleep">Sleep</option>
+
+          <option value="spanish">Spanish</option>
+
+          <option value="study">Study</option>
+
+          <option value="summer">Summer</option>
+
+          <option value="techno">Techno</option>
+
+          <option value="work-out">Work-out</option>
+
+          <option value="world-music">World-music</option>
+
+        </select>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="form-group">
+        <label for="id_style2">Style two (optional): </label> <select class="form-control" name="style2" id="id_style2">
+          <option value="-" selected>-</option>
+
+          <option value="acoustic">Acoustic</option>
+
+          <option value="afrobeat">Afrobeat</option>
+
+          <option value="ambient">Ambient</option>
+
+          <option value="anime">Anime</option>
+
+          <option value="blues">Blues</option>
+
+          <option value="chill">Chill</option>
+
+          <option value="classical">Classical</option>
+
+          <option value="club">Club</option>
+
+          <option value="country">Country</option>
+
+          <option value="dance">Dance</option>
+
+          <option value="disco">Disco</option>
+
+          <option value="disney">Disney</option>
+
+          <option value="dubstep">Dubstep</option>
+
+          <option value="edm">Edm</option>
+
+          <option value="electro">Electro</option>
+
+          <option value="electronic">Electronic</option>
+
+          <option value="emo">Emo</option>
+
+          <option value="french">French</option>
+
+          <option value="funk">Funk</option>
+
+          <option value="groove">Groove</option>
+
+          <option value="guitar">Guitar</option>
+
+          <option value="happy">Happy</option>
+
+          <option value="hard-rock">Hard-rock</option>
+
+          <option value="hardcore">Hardcore</option>
+
+          <option value="heavy-metal">Heavy-metal</option>
+
+          <option value="hip-hop">Hip-hop</option>
+
+          <option value="holidays">Holidays</option>
+
+          <option value="house">House</option>
+
+          <option value="j-pop">J-pop</option>
+
+          <option value="jazz">Jazz</option>
+
+          <option value="k-pop">K-pop</option>
+
+          <option value="kids">Kids</option>
+
+          <option value="latin">Latin</option>
+
+          <option value="latino">Latino</option>
+
+          <option value="metal">Metal</option>
+
+          <option value="movies">Movies</option>
+
+          <option value="new-release">New-release</option>
+
+          <option value="opera">Opera</option>
+
+          <option value="party">Party</option>
+
+          <option value="piano">Piano</option>
+
+          <option value="pop">Pop</option>
+
+          <option value="rainy-day">Rainy-day</option>
+
+          <option value="reggaeton">Reggaeton</option>
+
+          <option value="road-trip">Road-trip</option>
+
+          <option value="rock">Rock</option>
+
+          <option value="rock-n-roll">Rock-n-roll</option>
+
+          <option value="romance">Romance</option>
+
+          <option value="sad">Sad</option>
+
+          <option value="salsa">Salsa</option>
+
+          <option value="samba">Samba</option>
+
+          <option value="sleep">Sleep</option>
+
+          <option value="spanish">Spanish</option>
+
+          <option value="study">Study</option>
+
+          <option value="summer">Summer</option>
+
+          <option value="techno">Techno</option>
+
+          <option value="work-out">Work-out</option>
+
+          <option value="world-music">World-music</option>
+
+        </select>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="form-group">
+        <label for="id_style3">Style three (optional):</label> <select class="form-control" name="style3" id="id_style3">
+          <option value="-" selected>-</option>
+
+          <option value="acoustic">Acoustic</option>
+
+          <option value="afrobeat">Afrobeat</option>
+
+          <option value="ambient">Ambient</option>
+
+          <option value="anime">Anime</option>
+
+          <option value="blues">Blues</option>
+
+          <option value="chill">Chill</option>
+
+          <option value="classical">Classical</option>
+
+          <option value="club">Club</option>
+
+          <option value="country">Country</option>
+
+          <option value="dance">Dance</option>
+
+          <option value="disco">Disco</option>
+
+          <option value="disney">Disney</option>
+
+          <option value="dubstep">Dubstep</option>
+
+          <option value="edm">Edm</option>
+
+          <option value="electro">Electro</option>
+
+          <option value="electronic">Electronic</option>
+
+          <option value="emo">Emo</option>
+
+          <option value="french">French</option>
+
+          <option value="funk">Funk</option>
+
+          <option value="groove">Groove</option>
+
+          <option value="guitar">Guitar</option>
+
+          <option value="happy">Happy</option>
+
+          <option value="hard-rock">Hard-rock</option>
+
+          <option value="hardcore">Hardcore</option>
+
+          <option value="heavy-metal">Heavy-metal</option>
+
+          <option value="hip-hop">Hip-hop</option>
+
+          <option value="holidays">Holidays</option>
+
+          <option value="house">House</option>
+
+          <option value="j-pop">J-pop</option>
+
+          <option value="jazz">Jazz</option>
+
+          <option value="k-pop">K-pop</option>
+
+          <option value="kids">Kids</option>
+
+          <option value="latin">Latin</option>
+
+          <option value="latino">Latino</option>
+
+          <option value="metal">Metal</option>
+
+          <option value="movies">Movies</option>
+
+          <option value="new-release">New-release</option>
+
+          <option value="opera">Opera</option>
+
+          <option value="party">Party</option>
+
+          <option value="piano">Piano</option>
+
+          <option value="pop">Pop</option>
+
+          <option value="rainy-day">Rainy-day</option>
+
+          <option value="reggaeton">Reggaeton</option>
+
+          <option value="road-trip">Road-trip</option>
+
+          <option value="rock">Rock</option>
+
+          <option value="rock-n-roll">Rock-n-roll</option>
+
+          <option value="romance">Romance</option>
+
+          <option value="sad">Sad</option>
+
+          <option value="salsa">Salsa</option>
+
+          <option value="samba">Samba</option>
+
+          <option value="sleep">Sleep</option>
+
+          <option value="spanish">Spanish</option>
+
+          <option value="study">Study</option>
+
+          <option value="summer">Summer</option>
+
+          <option value="techno">Techno</option>
+
+          <option value="work-out">Work-out</option>
+
+          <option value="world-music">World-music</option>
+
+        </select>
+      </div>
+
+        <br>
+        <br>
+        <div class="row">
+
+        <div class="form-group col">
+          <label for="id_artist">An artist that you like (leave 0 if none): </label>
+          <input class="form-control" id="id_artist" type="text" name="artist" value="0">
+        </div>
+
+        <div class="form-group col">
+          <label for="id_linked_track">Or a track that you like (leave 0 if none): </label>
+          <input class="form-control" id="id_linked_track" type="text" name="linked_track" value="0">
+          <p class = "text-white">(Do not hesitate to copy-paste tracks from Spotify, since it is our database)</p>
+        </div>
+        </div>
+
+        <br>
+        <br>
+
+      <div class="form-group">
+        <label for="id_mood">Mood:</label> <select class="form-control" name="mood" id="id_mood">
+          <option value="0.8" selected>Turn Up</option>
+
+          <option value="0.5">Chill</option>
+
+          <option value="0.3">Study</option>
+
+        </select>
+      </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        {% csrf_token %}
+        <input class="btn btn-success"type="submit" name="" value="Get me my music!">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+</div>
+{%endblock%}
